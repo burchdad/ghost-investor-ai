@@ -73,10 +73,11 @@ def verify_token(token: str) -> Optional[TokenData]:
     """Verify JWT token and extract claims."""
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        username: str = payload.get("sub")
-        if username is None:
+        email: str = payload.get("sub")  # "sub" is now the email
+        user_id: int = payload.get("user_id")
+        if email is None or user_id is None:
             return None
-        token_data = TokenData(username=username, user_id=payload.get("user_id"))
+        token_data = TokenData(username=email, user_id=user_id)
         return token_data
     except JWTError:
         return None

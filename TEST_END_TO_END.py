@@ -140,11 +140,10 @@ class GhostInvestorAITester:
         log_step(1, "🔐 Finish Gmail OAuth")
         
         try:
-            # Request authorization URL
+            # Request authorization URL (no parameters needed)
             response = self.client.post(
                 "/api/email-accounts/authorize/gmail",
                 headers=self._headers(),
-                json={"authorization_url": "test"}
             )
             
             if response.status_code == 200:

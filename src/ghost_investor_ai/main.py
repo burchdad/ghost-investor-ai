@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 
+from .api.routes_auth import router as auth_router
 from .api.routes_leads import router as leads_router
 from .api.routes_enrichment import router as enrichment_router
 from .api.routes_campaigns import router as campaigns_router
@@ -44,6 +45,7 @@ app.add_middleware(
 )
 
 # Include routers
+app.include_router(auth_router)
 app.include_router(leads_router)
 app.include_router(enrichment_router)
 app.include_router(campaigns_router)
