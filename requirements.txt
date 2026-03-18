@@ -17,7 +17,7 @@ ruff==0.1.8
 mypy==1.7.1
 
 # Phase 1: Authentication & Email
-PyJWT==2.8.1
+PyJWT==2.12.1
 python-multipart==0.0.6
 slowapi==0.1.9
 bcrypt==4.1.1

@@ -1,7 +1,17 @@
 """Outlook/Microsoft Graph integration for sending and tracking emails."""
 from typing import Optional, List, Dict, Any
 from datetime import datetime
-from msgraph.core import GraphClient
+
+try:
+    from msgraph.core import GraphClient
+except ImportError:
+    from azure.identity import ClientSecretCredential
+    # Fallback: create a mock GraphClient for import compatibility
+    class GraphClient:
+        def __init__(self, credential=None):
+            self.credential = credential
+
+
 from azure.identity import ClientSecretCredential
 
 

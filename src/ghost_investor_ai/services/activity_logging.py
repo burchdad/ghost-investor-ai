@@ -2,7 +2,7 @@
 from datetime import datetime
 from typing import Optional
 from sqlalchemy.orm import Session
-from .models import Activity, Lead
+from ..models import Activity, Lead
 
 
 class ActivityLoggingService:

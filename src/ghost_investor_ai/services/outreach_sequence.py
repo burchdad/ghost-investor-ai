@@ -2,7 +2,7 @@
 from datetime import datetime, timedelta
 from typing import List, Dict, Any
 from sqlalchemy.orm import Session
-from .models import OutreachCampaign, OutreachEmail, FollowUpEmail, OutreachStatusEnum, Lead
+from ..models import OutreachCampaign, OutreachEmail, FollowUpEmail, OutreachStatusEnum, Lead
 import json
 
 

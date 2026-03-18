@@ -1,6 +1,6 @@
 """Email drafting service using AI/templates."""
 from typing import Dict, Any, Optional
-from .models import Lead
+from ..models import Lead
 import json
 
 

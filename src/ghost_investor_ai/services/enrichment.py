@@ -2,8 +2,8 @@
 import httpx
 import json
 from typing import Optional, Dict, Any
-from .models import Lead, EnrichmentSourceEnum
-from .config import settings
+from ..models import Lead, EnrichmentSourceEnum
+from ..config import settings
 
 
 class EnrichmentAdapter:

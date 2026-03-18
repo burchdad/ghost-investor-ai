@@ -77,7 +77,7 @@ class EmailServiceCoordinator:
     @staticmethod
     async def authorize_gmail(
         credentials_json: str, user_email: str, db: Session
-    ) -> Dictionary[str, Any]:
+    ) -> Dict[str, Any]:
         """Complete OAuth2 flow for Gmail."""
         try:
             # This would handle the full OAuth flow

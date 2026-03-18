@@ -9,6 +9,8 @@ from .api.routes_campaigns import router as campaigns_router
 from .api.routes_activities import router as activities_router
 from .api.routes_email_accounts import router as email_accounts_router
 from .api.routes_batch import router as batch_router
+from .api.routes_analytics import router as analytics_router
+from .api.routes_webhooks import router as webhooks_router
 from .database import Base, engine
 
 # Create tables
@@ -48,6 +50,8 @@ app.include_router(campaigns_router)
 app.include_router(activities_router)
 app.include_router(email_accounts_router)
 app.include_router(batch_router)
+app.include_router(analytics_router)
+app.include_router(webhooks_router)
 
 
 @app.get("/health")

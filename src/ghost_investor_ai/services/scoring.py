@@ -1,5 +1,5 @@
 """Contact scoring service."""
-from .models import Lead, ContactScore
+from ..models import Lead, ContactScore
 from sqlalchemy.orm import Session
 
 
